@@ -5,6 +5,8 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.tech.Student;
+import com.tech.entiy.A;
+import com.tech.entiy.B;
 
 public class Test {
 
@@ -14,10 +16,12 @@ public class Test {
 		
 		ApplicationContext con = new ClassPathXmlApplicationContext("config.xml");
 
-                 Student st = (Student) con.getBean("stu1");
+            //     Student st = (Student) con.getBean("stu1");
 		
+		//  B b = (B) con.getBean("b1");
+		A a= (A) con.getBean("a1");
 		
-		    System.out.println(st);
+		    System.out.println(a);
 		
 		
 		

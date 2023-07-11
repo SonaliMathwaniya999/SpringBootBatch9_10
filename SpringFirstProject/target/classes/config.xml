@@ -5,7 +5,7 @@
         http://www.springframework.org/schema/beans 
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="stu1"   class="com.tech.Student">
+<!--	<bean id="stu1"   class="com.tech.Student">
 	<property name="id">
 			<value>101</value>
 		</property>
@@ -30,8 +30,51 @@
 			<value>Mba</value>
 		</property>
 
-	</bean>
+	</bean> -->
 
 
+  <bean id = "c1" class="com.tech.entiy.C">
+   <property name="id">
+			<value>5001</value>
+		</property>
+	 	<property name="name">
+			<value>komal verma</value>
+		</property>
+		
+		
+		
+		 
+   
+  </bean>
+
+
+<bean id = "c2" class="com.tech.entiy.C">
+   <property name="id">
+			<value>5005</value>
+		</property>
+	 	<property name="name">
+			<value>naina joshi</value>
+		</property>
+   
+  </bean>
+
+
+  <bean id="b1" class="com.tech.entiy.B">
+  
+  <property name="obj">
+			<ref bean="c2" />
+		</property>
+  
+  </bean>
+
+
+   <bean id="a1" class="com.tech.entiy.A">
+   
+   <property name="bobj">
+			<ref bean="b1" />
+		</property>
+   
+   </bean>
+  
 
 </beans>
